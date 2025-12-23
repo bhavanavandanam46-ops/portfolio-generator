@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .prose h1, .prose h2, .prose h3 { font-weight: bold; }
+        .prose ul { list-style: disc; padding-left: 1.5rem; }
+        .prose a { color: #6366f1; }
+        .prose pre {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .cyberpunk-theme .prose h1,
+        .cyberpunk-theme .prose h2,
+        .cyberpunk-theme .prose h3 { color: #00ffff; }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 dark-theme">
+
+<div class="flex flex-col lg:flex-row h-screen">
+    <!-- Editor -->
+    <div class="w-full lg:w-1/2 p-6">
+        <h1 class="text-3xl font-bold mb-4">Portfolio Generator</h1>
+        <textarea id="markdownInput"
+            class="w-full h-full p-4 bg-gray-800 rounded-lg text-white border border-gray-700">
+# Bhavana
+### Full-Stack Developer
+
+---
+
+### About Me
+A passionate developer with experience in building web applications using modern technologies. I love creating beautiful and functional user experiences.
+
+---
+
+### Skills
+- **Frontend:** React, HTML, CSS
+- **Backend:** Node.js, Python
+- **Databases:** MySQL
+
+---
+
+### Projects
+#### My Awesome App
+A project that does awesome things.
+- **Technologies:** React, Tailwind CSS
+- **Link:** [View on GitHub](https://github.com/bhavana/my-awesome-app)
+
+#### Another Cool App
+Another project that is also very cool.
+- **Technologies:** Vue, Node.js
+- **Link:** [View on GitHub](https://github.com/bhavana/another-cool-app)
+        </textarea>
+    </div>
+
+    <!-- Preview -->
+    <div class="w-full lg:w-1/2 p-6 overflow-y-auto">
+        <div id="preview" class="prose bg-gray-800 p-8 rounded-lg"></div>
+    </div>
+</div>
+
+<script>
+const markdownInput = document.getElementById('markdownInput');
+const preview = document.getElementById('preview');
+
+const initialMarkdown = `# Bhavana
+### Full-Stack Developer
+
+---
+
+### About Me
+A passionate developer with experience in building web applications using modern technologies. I love creating beautiful and functional user experiences.
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .prose h1, .prose h2, .prose h3 { font-weight: bold; }
+        .prose ul { list-style: disc; padding-left: 1.5rem; }
+        .prose a { color: #6366f1; }
+        .prose pre {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .cyberpunk-theme .prose h1,
+        .cyberpunk-theme .prose h2,
+        .cyberpunk-theme .prose h3 { color: #00ffff; }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 dark-theme">
+
+<div class="flex flex-col lg:flex-row h-screen">
+    <!-- Editor -->
+    <div class="w-full lg:w-1/2 p-6">
+        <h1 class="text-3xl font-bold mb-4">Portfolio Generator</h1>
+        <textarea id="markdownInput"
+            class="w-full h-full p-4 bg-gray-800 rounded-lg text-white border border-gray-700">
+# Anvitha
+### Full-Stack Developer
+
+---
+
+### About Me
+A passionate developer with experience in building web applications using modern technologies. I love creating beautiful and functional user experiences.
+
+---
+
+### Skills
+- **Frontend:** React, HTML, CSS
+- **Backend:** Node.js, Python
+- **Databases:** MySQL
+
+---
+
+### Projects
+#### My Awesome App
+A project that does awesome things.
+- **Technologies:** React, Tailwind CSS
+- **Link:** [View on GitHub](https://github.com/anvitha/my-awesome-app)
+
+#### Another Cool App
+Another project that is also very cool.
+- **Technologies:** Vue, Node.js
+- **Link:** [View on GitHub](https://github.com/anvitha/another-cool-app)
+        </textarea>
+    </div>
+
+    <!-- Preview -->
+    <div class="w-full lg:w-1/2 p-6 overflow-y-auto">
+        <div id="preview" class="prose bg-gray-800 p-8 rounded-lg"></div>
+    </div>
+</div>
+
+<script>
+const markdownInput = document.getElementById('markdownInput');
+const preview = document.getElementById('preview');
+
+const initialMarkdown = `# Anvitha
+### Full-Stack Developer
+
+---
+
+### About Me
+A passionate developer with experience in building web applications using modern technologies. I love creating beautiful and functional user experiences.
+
+---
+
+### Skills
+- **Frontend:** React, Vue
+- **Backend:** Node.js, Python
+- **Databases:** PostgreSQL, MongoDB
+
+---
+
+### Projects
+#### My Awesome App
+- **Technologies:** React, Tailwind CSS
+- **Link:** https://github.com/anvitha/my-awesome-app
+`;
+
+markdownInput.value = initialMarkdown;
+
+function renderMarkdown(md) {
+    preview.innerHTML = marked.parse(md);
+}
+
+markdownInput.addEventListener('input', e => renderMarkdown(e.target.value));
+renderMarkdown(markdownInput.value);
+</script>
+
+</body>
+</html>
