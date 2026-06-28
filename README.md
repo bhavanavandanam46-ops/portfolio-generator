@@ -1,20 +1,18 @@
-# 💼 Personal Portfolio
+# 🚀 Portfolio Generator
 
-Welcome to my personal portfolio! This website showcases my technical skills, projects, certifications, and achievements as a Final Year Computer Science Engineering student.
+Portfolio Generator is a web application that helps users generate a clean and responsive personal portfolio website quickly and easily.
 
 ## 📸 Preview
 
-![Portfolio](portfolio.png)
+![Portfolio Generator](portfolio.png)
 
 ## ✨ Features
 
+* Generate a professional portfolio
 * Responsive design
-* About Me section
-* Skills section
-* Projects showcase
-* Certifications
-* Contact information
-* Modern and clean user interface
+* Easy customization
+* Clean user interface
+* Beginner-friendly
 
 ## 🛠️ Technologies Used
 
@@ -24,27 +22,28 @@ Welcome to my personal portfolio! This website showcases my technical skills, pr
 
 ## 📂 Project Structure
 
-```
-portfolio/
+```text
+portfolio-generator/
 │── index.html
 │── style.css
 │── script.js
-│── portfolio.png
+│── preview.png
 └── README.md
 ```
 
 ## 💻 How to Run
 
-1. Clone this repository.
-2. Open `index.html` in your web browser.
+1. Clone the repository.
+2. Open `index.html` in your browser.
 
 ## 🎯 Future Enhancements
 
-* Dark mode
-* Smooth animations
-* Contact form integration
-* GitHub Pages deployment
+* Export portfolio as PDF
+* Multiple portfolio themes
+* Live preview
+* Custom templates
 
 ## 👩‍💻 Author
 
 **Bhavana Vandanam**
+
